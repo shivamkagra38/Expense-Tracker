@@ -1,0 +1,37 @@
+*
+{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.title
+{
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-box input, .btn
+{
+    padding: 5px;
+    width : 30%;
+    min-width: 300px;
+}
+
+.input-box
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
