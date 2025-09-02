@@ -11,10 +11,6 @@ const Home = () => {
     const[amount,setAmount] = useState("");
 
     const[list,setList] = useState([]);
-    
-    useEffect(()=>{
-        
-    },[]);
 
     const addExpense = () => {
 
@@ -30,10 +26,8 @@ const Home = () => {
                 expense : expense,
                 amount : amount
             }
-
             setList([...list, newItem]);
         }
-
     }
 
     const deleteExpense = (id) => {
@@ -84,6 +78,7 @@ const Home = () => {
                         list.map((x, idx)=>{
 
                             return(
+
                                 <tr key={idx}>
                                     <td>{x.expense}</td>
                                     <td>{x.amount}</td>

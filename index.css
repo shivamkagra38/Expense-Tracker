@@ -9,7 +9,7 @@
 .title
 {
     font-size: 2rem;
-    padding: 10px;
+    padding: 20px;
 }
 
 .container
@@ -21,7 +21,7 @@
 
 .input-box input, .btn
 {
-    padding: 5px;
+    padding: 7px;
     width : 30%;
     min-width: 300px;
 }
@@ -55,7 +55,7 @@ table
 
 td,th
 {
-    border: 2px solid #ddd;
+    border: 1px solid #ddd;
     text-align: center;
 }
 
@@ -64,4 +64,33 @@ table th
     background-color: #04AA6D;
     color: white;
     padding: 5px;
+}
+
+table td
+{
+    padding: 5px;
+}
+
+.delete-btn
+{
+    background-color: rgb(255, 69, 69);
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+tbody tr:nth-child(even)
+{
+    background-color: #f5fffb;
+}
+
+body
+{
+    height: 100vh;
+    background: url('./background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
