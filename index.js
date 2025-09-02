@@ -20,6 +20,7 @@ const Home = () => {
 
         if(expense == "" || amount == "")
         {
+            alert("Please enter valid data");
             return;
         }
         else
@@ -65,20 +66,35 @@ const Home = () => {
             <div className="input-box">
                 <input type="text" className="expense-input" placeholder="Item..." value={expense} onChange={ (e)=>{setExpense(e.target.value)} } ></input>
                 <input type="number" className="amount-input" placeholder="Amount..." value={amount} onChange={ (e)=>{setAmount(e.target.value)} }></input>
-                <button className="btn" onClick={addExpense}>Add</button>
+                <button className="btn" onClick={addExpense}>Add Item</button>
             </div>
 
-            <ul className="list">
+            <table>
 
-                {
-                    list.map((x)=>{
+                <thead>
+                    <tr>
+                        <th>Expense</th>
+                        <th>Amount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
 
-                        return <li key={x.id}>{x.expense + "  " + x.amount}<button className="delete-btn" onClick={()=>{deleteExpense(x.id)}}> Delete</button></li>
+                <tbody>
+                    {
+                        list.map((x, idx)=>{
 
-                    })
-                }
+                            return(
+                                <tr key={idx}>
+                                    <td>{x.expense}</td>
+                                    <td>{x.amount}</td>
+                                    <td><button className="delete-btn" onClick={ ()=>{deleteExpense(x.id)} }>Delete</button></td>
+                                </tr>
+                            )
 
-            </ul>
+                        })
+                    }
+                </tbody>
+            </table>
 
         </div>
     );
